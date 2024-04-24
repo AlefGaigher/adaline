@@ -8,11 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors:{
+        'blue-primary': '#28ABE3',
+        'blue-sencondary': '#19779F',
+        'gray-primary': '#616163',
+        'gray-secondary': '#F5F5F5',
+        'black-primary': '#1D1D1B',
+        'whatsapp': '#25D366',
+        'white-smoke': '#f5f5f5',
       },
+      maxWidth:{
+        grid: '100%'
+      },
+      boxShadow: {
+        '3xl': '0px 0px 10px -5px rgba(0, 0, 0, 0.9)',
+      }
     },
   },
   plugins: [],
