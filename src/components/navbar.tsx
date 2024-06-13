@@ -16,7 +16,6 @@ export const MenuMobile = () => {
         setMenuOpen(!menuOpen);
     };
 
-    
     return (
         <nav>
             <header className='w-full flex items-center fixed z-50 p-7 bg-white h-14 text-base shadow top-0 left-0 right-0 '>
@@ -36,12 +35,12 @@ export const MenuMobile = () => {
                             </button>
                         </div>
                         <div className={` bg-gray-secondary ml-5 ${menuOpenMobile ? 'block' : 'hidden'} md:block`}>
-                            <button className='flex items-center justify-end gap-1'  id="aa" aria-label="Aria Name" aria-labelledby="labeldiv" title="Title">
+                            <button className='flex items-center justify-end gap-1' id="aa" aria-label="Aria Name" aria-labelledby="labeldiv" title="Title">
                                 <Image src={IcoPtBr} alt='icon pt br' className="" />
-                                <span >PT</span>
+                                <span>PT</span>
                             </button>
                         </div>
-                        <button onClick={toggleMenu} className='md:hidden'  id="aa" aria-label="Aria Name" aria-labelledby="labeldiv" title="Title">
+                        <button onClick={toggleMenu} className='md:hidden' id="aa" aria-label="Aria Name" aria-labelledby="labeldiv" title="Title">
                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {menuOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -56,18 +55,16 @@ export const MenuMobile = () => {
 
             <div className={`md:hidden bg-white fixed right-0 top-14 w-56 h-full z-40 ${menuOpen ? 'block' : 'hidden'} shadow-3xl`}>
                 {arrayMenu.map((item, index) => (
-                    <div className='grid ml-8 mt-5 font-semibold'>
-                        <Link key={index} href="#">
+                    <div key={index} className='grid ml-8 mt-5 font-semibold'>
+                        <Link href="#">
                             {item}
                         </Link>
                     </div>      
                 ))}
-                <button className='bg-blue-primary text-white pl-7 pr-7 rounded-full pt-1 pb-1 ml-5 mt-5 hover:bg-blue-sencondary'  id="aa" aria-label="Aria Name" aria-labelledby="labeldiv" title="Title">
+                <button className='bg-blue-primary text-white pl-7 pr-7 rounded-full pt-1 pb-1 ml-5 mt-5 hover:bg-blue-sencondary' id="aa" aria-label="Aria Name" aria-labelledby="labeldiv" title="Title">
                     Fale Conosco
                 </button>
             </div>
         </nav>
     );
-    
 };
-
